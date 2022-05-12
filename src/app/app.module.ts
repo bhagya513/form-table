@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import  as AWS from 'aws-sdk/global';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { S3 } from 'aws-sdk/clients/s3';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AWS,
+    S3
   ],
   providers: [],
   bootstrap: [AppComponent]
